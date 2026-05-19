@@ -239,7 +239,7 @@ function speakNext() {
   if (token === ' ') {
     setStatus('Pausa por espacio');
     state.currentIndex += 1;
-    queueNextChar(Math.max(40, Math.round(120 / state.rate)));
+    queueNextChar(Math.max(250, Math.round(350 / state.rate)));
     refreshButtons();
     return;
   }
@@ -253,7 +253,7 @@ function speakNext() {
 
       state.currentUtterance = null;
       state.currentIndex += 1;
-      queueNextChar(Math.max(90, Math.round(170 / state.rate)));
+      queueNextChar(Math.max(300, Math.round(500 / state.rate)));
     });
     refreshButtons();
     return;
@@ -267,7 +267,7 @@ function speakNext() {
 
     state.currentUtterance = null;
     state.currentIndex += 1;
-    queueNextChar(0);
+    queueNextChar(150);
   });
 
   refreshButtons();
